@@ -84,7 +84,12 @@ set nofoldenable        "dont fold by default
 
 let g:pymode_options_colorcolumn = 0
 set background=dark
-colorscheme slate 
+if has("gui_running")
+  colorscheme solarized
+else  
+  colorscheme slate
+endif
+
 "setup for powerline"
 set guifont=Inconsolata\ for\ Powerline:h15
 let g:Powerline_symbols = 'fancy'
