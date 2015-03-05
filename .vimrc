@@ -30,8 +30,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Plugin 'mattn/emmet-vim'
-Plugin 'Lokaltog/powerline'
-Plugin 'klen/python-mode'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -91,6 +90,7 @@ else
 endif
 
 "setup for powerline"
+set t_Co=256
 set guifont=Inconsolata\ for\ Powerline:h15
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
