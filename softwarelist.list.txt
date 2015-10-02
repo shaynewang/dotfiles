@@ -1,18 +1,9 @@
-Sequel\ Pro
-iTerm
 Macvim
 R
 Rstudio
-Cyberduck
 Caffeine
-Synergy
-Brackets
 Homebrew
 git
 Evernote
-Tableau
 Dropbox
-Alfred 2
-MAMP
-The Unarchiver
 
