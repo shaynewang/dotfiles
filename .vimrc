@@ -64,13 +64,12 @@ set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
 " ================ Indentation ======================
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set shiftwidth=8
+set softtabstop=8
+set tabstop=8
 set autoindent
 set smartindent
 set smarttab
-set expandtab
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
