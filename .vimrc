@@ -26,11 +26,10 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
-Plugin 'scrooloose/nerdtree'
+Plugin 'lervag/vimtex'
+Plugin 'rizzatti/dash.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
-Plugin 'mattn/emmet-vim'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -48,9 +47,9 @@ filetype plugin indent on    " required
 syntax enable
 " ================ Turn Off Swap Files ==============
 
-set noswapfile
-set nobackup
-set nowb
+"set noswapfile
+"set nobackup
+"set nowb
 
 " ================ General Config ====================
 
@@ -59,7 +58,7 @@ set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
-set gcr=a:blinkon0              "Disable cursor blink
+"set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
@@ -84,25 +83,10 @@ let g:pymode_options_colorcolumn = 0
 set background=dark
 if has("gui_running")
   colorscheme solarized
+  autocmd VimEnter * NERDTree
 else  
-  colorscheme slate
+  colorscheme peachpuff
 endif
 
-"setup for powerline"
-set t_Co=256
-set guifont=Inconsolata\ for\ Powerline:h15
-let g:Powerline_symbols = 'fancy'
-set encoding=utf-8
-set t_Co=256
-set fillchars+=stl:\ ,stlnc:\
-set term=xterm-256color
-set termencoding=utf-8
-"setup powerline for MacVim"
-if has("gui_running")
-    let s:uname = system("uname")
-        if s:uname == "Darwin\n"
-            set guifont=Inconsolata\ for\ Powerline:h15
-        endif
-endif
 " Always show statusline"
 set laststatus=2

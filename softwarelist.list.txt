@@ -1,9 +1,0 @@
-Macvim
-R
-Rstudio
-Caffeine
-Homebrew
-git
-Evernote
-Dropbox
-
