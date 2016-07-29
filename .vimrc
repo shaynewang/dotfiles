@@ -30,6 +30,10 @@ Plugin 'lervag/vimtex'
 Plugin 'rizzatti/dash.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'skammer/vim-css-color'
+Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -51,9 +55,10 @@ syntax enable
 "set nobackup
 "set nowb
 
+" ================ Autosave ==========================
+
 " ================ General Config ====================
 
-set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
@@ -81,12 +86,21 @@ set nofoldenable        "dont fold by default
 
 let g:pymode_options_colorcolumn = 0
 set background=dark
+colorscheme solarized
 if has("gui_running")
-  colorscheme solarized
-  autocmd VimEnter * NERDTree
+    set background=light
 else  
-  colorscheme peachpuff
+    set background=dark
 endif
+let g:solarized_termcolors=256
 
 " Always show statusline"
 set laststatus=2
+
+" Set hybird linenumber mode
+au InsertEnter * :set nu
+au InsertLeave * :set rnu
+set relativenumber 
+set number
+
+let g:cssColorVimDoNotMessMyUpdatetime = 1
