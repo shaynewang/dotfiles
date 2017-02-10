@@ -30,7 +30,7 @@ Plugin 'lervag/vimtex'
 Plugin 'rizzatti/dash.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
 Plugin 'skammer/vim-css-color'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
@@ -48,7 +48,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-syntax enable
+ syntax enable
 " ================ Turn Off Swap Files ==============
 
 "set noswapfile
@@ -68,9 +68,9 @@ set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
 " ================ Indentation ======================
-set shiftwidth=8
-set softtabstop=8
-set tabstop=8
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set autoindent
 set smartindent
 set smarttab
@@ -86,13 +86,13 @@ set nofoldenable        "dont fold by default
 
 let g:pymode_options_colorcolumn = 0
 set background=dark
-colorscheme solarized
-if has("gui_running")
-    set background=light
-else  
-    set background=dark
-endif
-let g:solarized_termcolors=256
+" colorscheme solarized
+" if has("gui_running")
+"     set background=light
+" else  
+"     set background=dark
+" endif
+" let g:solarized_termcolors=256
 
 " Always show statusline"
 set laststatus=2
