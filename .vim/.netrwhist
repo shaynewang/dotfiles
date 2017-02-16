@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/Shayne/.config/nvim'
+let g:netrw_dirhist_2='/private/var/at/tabs'
+let g:netrw_dirhist_3='/Users/Shayne/Desktop'
+let g:netrw_dirhist_4='/Users/Shayne/Desktop/Bend-2016-09-22'
+let g:netrw_dirhist_5='/Users/Shayne/Desktop'
+let g:netrw_dirhist_6='/Users/Shayne/current_term/cs333/xv6'
+let g:netrw_dirhist_7='/Users/Shayne'
+let g:netrw_dirhist_8='/Users/Shayne/mean/config'
+let g:netrw_dirhist_9='/Users/Shayne/.irssi'
