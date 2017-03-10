@@ -31,7 +31,7 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 " Plugin 'altercation/vim-colors-solarized'
-Plugin 'skammer/vim-css-color'
+" Plugin 'skammer/vim-css-color'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " All of your Plugins must be added before the following line
@@ -68,12 +68,20 @@ set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
 " ================ Indentation ======================
+" configure expanding of tabs for various file types
+au BufRead,BufNewFile *.py set expandtab
+au BufRead,BufNewFile *.go set expandtab
+au BufRead,BufNewFile *.lhs set expandtab
+au BufRead,BufNewFile *.txt set expandtab
+au BufRead,BufNewFile *.c set noexpandtab
+au BufRead,BufNewFile *.h set noexpandtab
+au BufRead,BufNewFile Makefile* set noexpandtab
+set autoindent
+set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-set autoindent
-set smartindent
-set smarttab
+set textwidth=120       " break lines when line length increases
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
@@ -103,4 +111,4 @@ au InsertLeave * :set rnu
 set relativenumber 
 set number
 
-let g:cssColorVimDoNotMessMyUpdatetime = 1
+" let g:cssColorVimDoNotMessMyUpdatetime = 1
