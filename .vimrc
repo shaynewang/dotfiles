@@ -30,9 +30,10 @@ Plugin 'lervag/vimtex'
 Plugin 'rizzatti/dash.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'altercation/vim-colors-solarized'
 " Plugin 'skammer/vim-css-color'
-Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -93,6 +94,7 @@ set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
 
 let g:pymode_options_colorcolumn = 0
+let g:python3_host_prog  = '/usr/local/bin/python3'
 set background=dark
 " colorscheme solarized
 " if has("gui_running")
