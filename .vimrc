@@ -9,6 +9,10 @@ if has('nvim')
     Plug 'vim-airline/vim-airline'
     Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
     call plug#end()
+    tnoremap <Esc> <C-\><C-n>
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
+        \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
 else
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
