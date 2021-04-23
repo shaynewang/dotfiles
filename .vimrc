@@ -3,40 +3,49 @@ filetype off                  " required
 
 map <c-j> :%!python -m json.tool<CR>
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+if has('nvim')
+    let s:editor_root=expand("~/.config/nvim")
+    call plug#begin('~/.vim/plugged')
+    Plug 'vim-airline/vim-airline'
+    Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+    call plug#end()
+else
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+    " alternatively, pass a path where Vundle should install plugins
+    "call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+    " let Vundle manage Vundle, required
+    Plugin 'VundleVim/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/VundleVim/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-" Plugin 'user/L9', {'name': 'newL9'}
-Plugin 'lervag/vimtex'
-Plugin 'rizzatti/dash.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'fatih/vim-go'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-" Plugin 'altercation/vim-colors-solarized'
-" Plugin 'skammer/vim-css-color'
+    " The following are examples of different formats supported.
+    " Keep Plugin commands between vundle#begin/end.
+    " plugin on GitHub repo
+    " Plugin 'tpope/vim-fugitive'
+    " plugin from http://vim-scripts.org/vim/scripts.html
+    " Plugin 'L9'
+    " Git plugin not hosted on GitHub
+    " Plugin 'git://git.wincent.com/command-t.git'
+    " git repos on your local machine (i.e. when working on your own plugin)
+    " Plugin 'file:///home/VundleVim/path/to/plugin'
+    " The sparkup vim script is in a subdirectory of this repo called vim.
+    " Pass the path to set the runtimepath properly.
+    " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+    " Avoid a name conflict with L9
+    " Plugin 'user/L9', {'name': 'newL9'}
+    Plugin 'lervag/vimtex'
+    Plugin 'rizzatti/dash.vim'
+    Plugin 'kien/ctrlp.vim'
+    Plugin 'fatih/vim-go'
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
+    " Plugin 'altercation/vim-colors-solarized'
+    " Plugin 'skammer/vim-css-color'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+    " All of your Plugins must be added before the following line
+    call vundle#end()            " required
+endif
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
